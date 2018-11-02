@@ -3,9 +3,12 @@
 ![CSS Postprocessor: SASS](https://img.shields.io/badge/CSS%20postprocessor-SASS-green.svg)
 
 # Pure CSS hamburger icon animation
-This repository contains code necessary to transform hamburger icon into a closing icon upon activation.
+This repository contains code necessary to transform hamburger icon into a closing icon upon activation. Animation is done with pure CSS.
 
-## Running peview
+- [Running preview](#running-preview)
+- [Developing](#developing)
+
+## Running preview
 1. Bundle front-end code by running:
 ```
 npm run bundle
@@ -15,3 +18,10 @@ npm run bundle
 ```
 npm run lint
 ```
+
+## Developing
+To develop simply run
+```
+npm run dev
+```
+this build will start a watcher which will wait for changes made to client-side `.scss` or `.js` files and do steps highlighted above automatically.

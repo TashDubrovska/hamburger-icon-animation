@@ -4,6 +4,7 @@
   "description": "Pure CSS hamburger icon animation",
   "main": "index.js",
   "scripts": {
+    "dev": "nodemon --watch ./src/sass --watch ./src/js --ext js,scss --exec 'npm run lint && npm run bundle'",
     "test": "echo \"Error: no test specified\" && exit 1",
     "bundle": "rm -rf ./assets && parcel build ./src/sass/hamburger-icon.scss ./src/js/index.js --out-dir ./assets",
     "lint": "npm run lint:js && npm run lint:sass",
@@ -38,6 +39,7 @@
     "eslint": "^5.8.0",
     "eslint-config-airbnb-base": "^13.1.0",
     "eslint-plugin-import": "^2.14.0",
+    "nodemon": "^1.18.5",
     "parcel-bundler": "^1.10.3",
     "sass": "^1.14.3",
     "sass-lint": "^1.12.1"
