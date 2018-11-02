@@ -1,0 +1,57 @@
+// First line animations
+@keyframes first-line-animation {
+  from {
+    transform: translateY(0) rotate(0);
+  }
+
+  15%  {
+    transform: translateY($hamburger-icon-line-height + $hamburger-icon-line-spacing) rotate(0);
+  }
+
+  to {
+    transform: translateY($hamburger-icon-line-height + $hamburger-icon-line-spacing) rotate(45deg);
+  }
+}
+
+@keyframes first-line-animation-reverse {
+  from {
+    transform: translateY($hamburger-icon-line-height + $hamburger-icon-line-spacing) rotate(45deg);
+  }
+
+  75%  {
+    transform: translateY($hamburger-icon-line-height + $hamburger-icon-line-spacing) rotate(0);
+  }
+
+  to {
+    transform: translateY(0) rotate(0);
+  }
+}
+
+// Third line animations
+@keyframes third-line-animation {
+  from {
+    transform: translateY(0) rotate(0);
+  }
+
+  15%  {
+    transform: translateY(($hamburger-icon-line-height + $hamburger-icon-line-spacing) * -1) rotate(0);
+  }
+
+  to {
+    transform: translateY(($hamburger-icon-line-height + $hamburger-icon-line-spacing) * -1) rotate(-45deg);
+  }
+}
+
+@keyframes third-line-animation-reverse {
+  from {
+    transform: translateY(($hamburger-icon-line-height + $hamburger-icon-line-spacing) * -1) rotate(-45deg);
+  }
+
+  75%  {
+    transform: translateY(($hamburger-icon-line-height + $hamburger-icon-line-spacing) * -1) rotate(0);
+  }
+
+  to {
+    transform: translateY(0) rotate(0);
+  }
+}

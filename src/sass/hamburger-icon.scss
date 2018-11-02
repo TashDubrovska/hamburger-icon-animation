@@ -1,10 +1,8 @@
-// Hamburger menu icon
-$hamburger-icon-line-height: 2px;
-$hamburger-icon-line-colour: #333;
-$hamburger-icon-line-spacing: 6px;
-$hamburger-icon-bottom-margin: 6px;
+@import "variables";
+@import "animations";
 
 .hamburger-trigger {
+  background: none;
   border: 0;
   font-size: 10px;
   width: auto;
@@ -27,28 +25,32 @@ $hamburger-icon-bottom-margin: 6px;
       height: $hamburger-icon-line-height;
       position: absolute;
       left: 0;
-      transition: transform ease-out 0.2s, background-color ease-out 0.05s 0.2s, top ease-out 0.1s 0.18s;
       width: 100%;
-
-      .open & {
-        transition: top ease-in 0.1s, background-color ease-in 0.1s 0.1s, transform ease-in 0.2s 0.1s;
-      }
     }
 
     &:before {
       content: "";
       top: ($hamburger-icon-line-height + $hamburger-icon-line-spacing) * -1;
+      animation-fill-mode: both;
+      animation-duration: 0.3s;
+      animation-timing-function: ease-in-out;
+      animation-iteration-count: 1;
 
       .open & {
-        top: 0;
-        transform: rotate(45deg);
+        animation-name: first-line-animation;
+      }
+
+      .closed & {
+        animation-name: first-line-animation-reverse;
       }
     }
 
     & {
       top: $hamburger-icon-line-height + $hamburger-icon-line-spacing;
+      transition: background-color 0.045s 0.225s;
 
       .open & {
+        transition: background-color 0.225s 0.045s;
         background-color: transparent;
       }
     }
@@ -56,10 +58,17 @@ $hamburger-icon-bottom-margin: 6px;
     &:after {
       content: "";
       top: $hamburger-icon-line-height + $hamburger-icon-line-spacing;
+      animation-fill-mode: both;
+      animation-duration: 0.3s;
+      animation-timing-function: ease-in-out;
+      animation-iteration-count: 1;
 
       .open & {
-        top: 0;
-        transform: rotate(-45deg);
+        animation-name: third-line-animation;
+      }
+
+      .closed & {
+        animation-name: third-line-animation-reverse;
       }
     }
   }
