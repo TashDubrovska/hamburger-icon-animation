@@ -1,0 +1,45 @@
+{
+  "name": "hamburger-icon-animation",
+  "version": "0.0.1",
+  "description": "Pure CSS hamburger icon animation",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "bundle": "rm -rf ./assets && parcel build ./src/sass/hamburger-icon.scss ./src/js/index.js --out-dir ./assets",
+    "lint": "npm run lint:js && npm run lint:sass",
+    "lint:js": "eslint --ext .js src/",
+    "lint:sass": "sass-lint '/src/sass/**.scss' --verbose"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/TashDubrovska/hamburger-icon-animation.git"
+  },
+  "keywords": [
+    "CSS",
+    "animation",
+    "hamburger",
+    "icon"
+  ],
+  "author": "Nataliya Dubrovska",
+  "license": "ISC",
+  "engines": {
+    "node": "10.13.0",
+    "npm": "6.4.1"
+  },
+  "browserslist": [
+    "> 2%",
+    "last 4 versions"
+  ],
+  "bugs": {
+    "url": "https://github.com/TashDubrovska/hamburger-icon-animation/issues"
+  },
+  "homepage": "https://github.com/TashDubrovska/hamburger-icon-animation#readme",
+  "devDependencies": {
+    "eslint": "^5.8.0",
+    "eslint-config-airbnb-base": "^13.1.0",
+    "eslint-plugin-import": "^2.14.0",
+    "parcel-bundler": "^1.10.3",
+    "sass": "^1.14.3",
+    "sass-lint": "^1.12.1"
+  }
+}
