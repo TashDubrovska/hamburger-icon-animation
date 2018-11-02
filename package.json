@@ -5,8 +5,7 @@
   "main": "index.js",
   "scripts": {
     "dev": "nodemon --watch ./src/sass --watch ./src/js --ext js,scss --exec 'npm run lint && npm run bundle'",
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "bundle": "rm -rf ./assets && parcel build ./src/sass/hamburger-icon.scss ./src/js/index.js --out-dir ./assets",
+    "bundle": "rm -rf ./assets && parcel build ./src/sass/hamburger-icon.scss ./src/sass/common/normalize.scss ./src/js/index.js --out-dir ./assets",
     "lint": "npm run lint:js && npm run lint:sass",
     "lint:js": "eslint --ext .js src/",
     "lint:sass": "sass-lint '/src/sass/**.scss' --verbose"
@@ -39,7 +38,9 @@
     "eslint": "^5.8.0",
     "eslint-config-airbnb-base": "^13.1.0",
     "eslint-plugin-import": "^2.14.0",
+    "node-sass-package-importer": "^5.2.0",
     "nodemon": "^1.18.5",
+    "normalize.css": "^8.0.0",
     "parcel-bundler": "^1.10.3",
     "sass": "^1.14.3",
     "sass-lint": "^1.12.1"
